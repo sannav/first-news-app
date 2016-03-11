@@ -2,6 +2,28 @@
 <html lang="en">
     <head></head>
     <body>
-        <h1>Deaths during the L.A. riots</h1>
+        <h1>D&ouml;da under upploppen i L.A. 1992</h1>
+        <table border=0 cellpadding=4 >
+            <tr>
+                <th>Namn</th>
+                <th>Datum</th>
+                <th>Typ</th>
+                <th>Address</th>
+                <th>&Aring;lder</th>
+                <th>K&ouml;n</th>
+                <th>Ras</th>
+            </tr>
+        {% for obj in object_list %}
+            <tr>
+                <td><a href="{{ obj.id }}/">{{ obj.full_name }}</a></td>
+                <td>{{ obj.date }}</td>
+                <td>{{ obj.type }}</td>
+                <td>{{ obj.address }}</td>
+                <td>{{ obj.age }}</td>
+                <td>{{ obj.gender }}</td>
+                <td>{{ obj.race }}</td>
+            </tr>
+        {% endfor %}
+        </table>
     </body>
 </html>
